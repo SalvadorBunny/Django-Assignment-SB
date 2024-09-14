@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="background">
+    <div class="rounded container my-3 px-3 background">
+        <div class="container"> 
+            <!--HEADER-->
+            <div class="rounded container white">
+                <div class="row px-4">
+                    <div class="col-6">
+                        <a href="/">
+                            <img class="logo" src="{% static '/img/logo.png' %}"  alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 text-center options">
+                        <div class="row item ">
+                            <a href="/empleados" role="button" class="btn btn-primary-outline btn-lg btn-block col-4">Empleados</a>
+                            <a href="/clientes" role="button" class="btn btn-primary-outline btn-lg btn-block col-4">Clientes</a>
+                            <a href="/egresados" role="button" class="btn btn-primary-outline btn-lg btn-block col-4">Egresados</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--MAIN CONTENT-->
+            <div class="container text-center">
+                <h1 class="orange">{{ titulo }}</h1>
+
+            </div>
+            <div class="container my-5 px-5">
+                <div class="rounded card flex-row my-5"><img class="card-img-left example-card-img-responsive crdimg" src="{% static '' %}img/{{imagen1}}"/>
+                    <div class="card-body">
+                      <h4 class="card-title h5 h4-sm">{{ persona1 }}</h4>
+                      <h4 class="card-title h5 h4-sm">{{ extra1 }}</h4>
+                      <p class="card-text black">{{ desc1 }}</p>
+                    </div>
+                </div>
+                <div class="rounded card flex-row my-5"><img class="card-img-left example-card-img-responsive crdimg" src="{% static '' %}img/{{imagen2}}"/>
+                    <div class="card-body">
+                      <h4 class="card-title h5 h4-sm">{{ persona2 }}</h4>
+                      <h4 class="card-title h5 h4-sm">{{ extra2 }}</h4>
+                      <p class="card-text black">{{ desc2 }}</p>
+                    </div>
+                </div>
+                <div class="rounded card flex-row my-5"><img class="card-img-left example-card-img-responsive crdimg" src="{% static '' %}img/{{imagen3}}"/>
+                    <div class="card-body">
+                      <h4 class="card-title h5 h4-sm">{{ persona3 }}</h4>
+                      <h4 class="card-title h5 h4-sm">{{ extra3 }}</h4>
+                      <p class="card-text black">{{ desc3 }}</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--FOOTER-->
+            <div class="container text-center">
+                <blockquote class="blockquote mb-0"></blockquote>
+                <p>Siguenos en nuestras redes sociales!.</p>
+                <a href="https://facebook.com/tu_perfil" target="_blank">
+                    <img class="twtlogo" src="{% static 'img/twitter.png' %}" alt="twitter">
+                </a>
+                <footer class="blockquote-footer">"Commando is dead" <cite title="Source Title">Captain</cite></footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
